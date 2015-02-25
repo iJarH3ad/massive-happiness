@@ -1,0 +1,218 @@
+    /*--------------------------------
+    Browser Reset 
+    ---------------------------------*/
+    /*
+    * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+    * http://cssreset.com
+    */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+    display: block;
+    }
+    body {
+    line-height: 1;
+    }
+    ol, ul {
+    list-style: none;
+    }
+    blockquote, q {
+    quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+    content: '';
+    content: none;
+    }
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+
+/*--------------------------------
+            custom Styles 
+---------------------------------*/       
+*, *::before, *:after {
+	box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+body{
+	font-family: tahoma;
+    font-weight: 200;
+    line-height: 1.2;
+}
+header{
+	background-color: hsl(202, 91%, 87%);
+    padding-top: 10px;
+}
+header img{
+    display: block;
+	width: 20%;
+    margin: 0 auto 10px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px;
+}
+
+header li {
+    display: inline-block;
+    width: 25%;
+    padding: 10px 20px;
+    float: left;
+    text-align: center;
+}
+
+header li a {
+    display: block;
+    position: relative;
+    padding: 10px 0;
+    background-color: hsl(203, 94%, 87%);
+    border: 1px solid hsl(203, 94%, 70%);
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    transition: background-color 250ms ease-in-out, border 500ms ease-in-out;
+    overflow: hidden;
+}
+
+header li a:hover{
+    background-color: hsl(203,94%, 75%);
+    border: 1px solid hsl(203,94%,65%);
+}
+
+.hero{
+	background-color: hsl(300, 91%, 87%);
+	height: 200px;
+	background-image: url("../img/sky.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;	
+}
+main{
+	background-color: hsl(0, 0%, 92%);
+    position: relative;
+}
+
+main img{
+    position: absolute;
+    top: 20px;
+    left: 15%;
+    z-index: 0;
+    width: 25%;
+    border-radius: 50%;
+
+}
+
+main img:hover {
+    transition: left 150ms ease-in-out;
+    left: 5%;
+}
+
+article {
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    float: right;
+    background-color: #fff;
+    padding: 0 20px 40px;
+    margin-bottom: 60px;
+    margin-right: 5%;
+}
+
+article::before {
+    content: "";
+    display: block;
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background-image: url("../img/mail.png");
+    background-repeat: repeat-x;
+
+}
+
+h1{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+p{
+    font-size: 24px;
+    margin-bottom: 10px 0 20px;
+
+}
+
+h2{
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+
+footer{
+	background-color: hsl(0, 0%, 19%);
+	padding: 20px;
+    margin-top: 60px;
+    color: white;
+}
+
+footer p{
+    font-size: 80%;
+}
+
+.shine::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    background: linear-gradient(to bottom, rgba(229,172,142, 0), rgba(225,225,225, 0.5), rgba(229,172,142, 0));
+    transform: rotateZ(60deg) translate(-5em, 9em);
+    -webkit-transform: rotateZ(60deg) translate(-5em, 9em);
+}   
+
+
+.shine:hover::after, .shine:focus::after {
+    animation: sheen 1s forwards;
+    -webkit-animation: sheen 1s forwards;
+}
+
+@Keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em, -5em);
+    }
+}
+
+@-webkit-keyframes sheen {
+    100% {
+        tranform: rotateZ(60deg) translate(1em, -5em);
+    }
+}
